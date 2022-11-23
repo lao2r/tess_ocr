@@ -2,7 +2,6 @@ package com.app.tess_ocr;
 
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
-import org.apache.commons.io.FilenameUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +14,6 @@ public class TesseractOCR {
 
 
     public static void recognizeImage() {
-
         try (PrintWriter writer = new PrintWriter("parsed.txt", "UTF-8")) {
             Arrays.stream(Objects.requireNonNull((new File("./input")).listFiles()))
                 .forEach(e -> {
