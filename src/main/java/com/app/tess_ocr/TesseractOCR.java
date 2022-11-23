@@ -12,7 +12,6 @@ import java.util.Objects;
 
 public class TesseractOCR {
 
-
     public static void recognizeImage() {
         try (PrintWriter writer = new PrintWriter("parsed.txt", "UTF-8")) {
             Arrays.stream(Objects.requireNonNull((new File("./input")).listFiles()))
